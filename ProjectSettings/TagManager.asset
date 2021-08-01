@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Environment
+  - Ground
+  - TimetrailGround
+  - PowerUps
+  - FxTemporaire
+  - Heal
+  - music
+  - Guns
+  - EnemyRed
+  - PlayerBullet
+  - EnemyBulletTag
+  - EnemyRocket
+  - DropLootTracker
+  - SkullPowerup
+  - DropLootPowerTracker
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Enemy
+  - Environment
+  - PowerUps
+  - EnemyBulletTag
+  - PlayerBullet
+  - Player
+  - EnemyRocket
+  - PostProcessing
+  - SkullPowerup
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Enviromentlayer
+    uniqueID: 2624659139
+    locked: 0
+  - name: PostProcessing
+    uniqueID: 3776703943
+    locked: 0
