@@ -7131,8 +7131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0a542443b1e0d4d8b35960eb4f1d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 15
-  maxhealth: 30
+  currentHealth: 3
+  maxhealth: 3
   pos1: {x: 30, y: -12, z: 0}
   pos2: {x: -18, y: -12, z: 0}
   floatingTextPrefab: {fileID: 1563208936878710416, guid: da28883b189eed547b7ec140858b7bba, type: 3}

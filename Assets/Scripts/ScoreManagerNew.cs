@@ -117,7 +117,7 @@ public class ScoreManagerNew : MonoBehaviour
 		//SoundManager.PlaySound("whoosh");
 			Debug.Log("End Scote " + growthRate);
 		}
-		playfabMananger.SendLeaderBoard(endScores);
+	//	playfabMananger.SendLeaderBoard(endScores);
 
 	}
 	
