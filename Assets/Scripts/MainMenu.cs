@@ -8,9 +8,9 @@ public class MainMenu : MonoBehaviour
 	public GameObject SinglePlayerprefab;
 	public GameObject MainmenuPrefab;
 	public GameObject Helpprefab;
-	public GameObject PlayFabUserName;
+	//public GameObject PlayFabUserName;
 	
-	public GameObject canvas;
+	//public GameObject canvas;
 	
 	// Start is called before the first frame update
 	void Start()
@@ -33,17 +33,10 @@ public class MainMenu : MonoBehaviour
 		SinglePlayerprefab.SetActive(false);		
 		MainmenuPrefab.SetActive(false);	
 		Helpprefab.SetActive(false);
-		PlayFabUserName.SetActive(true);
+	//	PlayFabUserName.SetActive(true);
 		
 	}
-	public void MultiPlayerMode()
-	{
-		SinglePlayerprefab.SetActive(false);		
-		MainmenuPrefab.SetActive(false);	
-		canvas.SetActive(true);
 
-
-	}
 	public void Options()
 	{
 		
@@ -54,7 +47,7 @@ public class MainMenu : MonoBehaviour
 		SinglePlayerprefab.SetActive(false);		
 		MainmenuPrefab.SetActive(false);	
 		Helpprefab.SetActive(true);
-		canvas.SetActive(false);
+	//	canvas.SetActive(false);
 	}
 	public void TimeTrail()
 	{
