@@ -13,6 +13,7 @@ public class SlowMotionManager : MonoBehaviour
 	}
  
 	public float slowdownFactor = 0.05f;
+	
 	public float slowdownLenght = 2f;
 	
 	
@@ -26,14 +27,17 @@ public class SlowMotionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	//	Time.timeScale += (1f/slowdownLenght) * Time.unscaledDeltaTime;
-	//	Time.timeScale = Mathf.Clamp(Time.timeScale,0f,1f);
+
 		BacktoNormal();
+		
     }
 	public void BacktoNormal()
 	{
-		  Time.timeScale += (1f/slowdownLenght) * Time.unscaledDeltaTime;
+		
+		Time.timeScale += (1f/slowdownLenght) * Time.unscaledDeltaTime;
+		
 		Time.timeScale = Mathf.Clamp(Time.timeScale,0f,1f);
+		
 	}
 	
 	
@@ -41,6 +45,7 @@ public class SlowMotionManager : MonoBehaviour
 	{
 		
 		 Time.timeScale = slowdownFactor;
+		 
 		 Time.fixedDeltaTime = Time.timeScale * .02f;
 		
 	}	

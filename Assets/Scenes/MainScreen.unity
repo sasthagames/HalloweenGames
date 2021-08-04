@@ -1176,6 +1176,7 @@ Animation:
   m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: c3076e6a17ab66947b4c666244a35b63, type: 2}
+  - {fileID: 7400000, guid: 2fca5f5dc9703f64c870bcd5c8a045a6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -3362,7 +3363,19 @@ PrefabInstance:
       value: ButtonAudioSource
       objectReference: {fileID: 0}
     - target: {fileID: 6680556474966877842, guid: 72b266c860c7753428128dee89ab3544, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cca493473b0760847a89c78c0c3be752, type: 3}
+    - target: {fileID: 6680556474966877842, guid: 72b266c860c7753428128dee89ab3544, type: 3}
       propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680556474966877842, guid: 72b266c860c7753428128dee89ab3544, type: 3}
+      propertyPath: BypassEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680556474966877842, guid: 72b266c860c7753428128dee89ab3544, type: 3}
+      propertyPath: BypassListenerEffects
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6680556474966877843, guid: 72b266c860c7753428128dee89ab3544, type: 3}

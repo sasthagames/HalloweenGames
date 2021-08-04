@@ -1322,6 +1322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419390006}
   - component: {fileID: 419390005}
+  - component: {fileID: 419390007}
   m_Layer: 0
   m_Name: ScoreManagerNew
   m_TagString: Untagged
@@ -1341,8 +1342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47236bed80cd27e48beab2d4ea7d69bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playfabMananger: {fileID: 0}
-  pointincrease: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  achievement: {fileID: 8300000, guid: 536a432ed49565b4aa52fb93038f4cb2, type: 3}
   scoreVal: {fileID: 717190019}
   endScoreVal: {fileID: 1416079989}
   incScoreText: {fileID: 717190019}
@@ -1364,6 +1364,102 @@ Transform:
   m_Father: {fileID: 800715636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &419390007
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419390004}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 536a432ed49565b4aa52fb93038f4cb2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &428967102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8874562640157334767, guid: 7cb00d5adeaee9842ad063513464f24d, type: 3}
@@ -1855,7 +1951,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 60, y: 45}
-  m_SizeDelta: {x: 512, y: 128}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535216860
 MonoBehaviour:
@@ -1890,7 +1986,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '00 '
+  m_Text: 00
 --- !u!222 &535216861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2159,7 +2255,7 @@ MonoBehaviour:
   finalKillValue: {fileID: 446988382}
   kills: 0
   audioSource: {fileID: 599981755}
-  clip: {fileID: 8300000, guid: 4cd0639819f570242a2ab69ba1fc1b9e, type: 3}
+  clip: {fileID: 8300000, guid: 026bb854d5ef75149995ff4cfaa9f3be, type: 3}
   volume: 0.5
 --- !u!4 &599981753
 Transform:
@@ -3010,8 +3106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loading: {fileID: 434135608}
   timeText: {fileID: 438148614}
-  minutes: 1
-  sec: 10
+  minutes: 2
+  sec: 0
 --- !u!4 &972140163
 Transform:
   m_ObjectHideFlags: 0
@@ -6456,6 +6552,10 @@ PrefabInstance:
     - target: {fileID: 8496741112251135833, guid: 1a6c04008f467f249ad0b82ec5af007d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496741112251135833, guid: 1a6c04008f467f249ad0b82ec5af007d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8496741112251135833, guid: 1a6c04008f467f249ad0b82ec5af007d, type: 3}
       propertyPath: m_SizeDelta.y

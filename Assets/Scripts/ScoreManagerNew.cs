@@ -6,9 +6,8 @@ public class ScoreManagerNew : MonoBehaviour
 {
 	public static ScoreManagerNew instance;
 	
-	public PlayFabManager playfabMananger;
-	
-	public AudioClip pointincrease;
+
+	public AudioClip achievement;
 	
     AudioSource audioSource;
 	
@@ -58,52 +57,70 @@ public class ScoreManagerNew : MonoBehaviour
 			Debug.Log ("Player reaches"+scores);
 			AchievementManager.instance.Achievementreached200();
 			
+			audioSource.PlayOneShot(achievement, 0.7F);
 			
 		}
 		if(scores >= 400)
 		{
 				AchievementManager.instance.Achievementreached400();
-					 
+				
+				audioSource.PlayOneShot(achievement, 0.7F);	 
 		}
 		if(scores >= 600)
 		{
 				AchievementManager.instance.Achievementreached600();
+				
+				audioSource.PlayOneShot(achievement, 0.7F);
 					 
 		}
 		if(scores >= 800)
 		{
 			AchievementManager.instance.Achievementreached800();
+			
+			audioSource.PlayOneShot(achievement, 0.7F);
 
 		}
 			if(scores >= 1000) 
 		{
 			AchievementManager.instance.Achievementreached1000();
 			
+			audioSource.PlayOneShot(achievement, 0.7F);
+			
 			
 		}
 		if(scores >= 1200)
 		{
 				AchievementManager.instance.Achievementreached1200();
+				
+				audioSource.PlayOneShot(achievement, 0.7F);
 					 
 		}
 		if(scores >= 1400)
 		{
 				AchievementManager.instance.Achievementreached1400();
+				
+				audioSource.PlayOneShot(achievement, 0.7F);
 					 
 		}
 		if(scores >= 1600)
 		{
 			AchievementManager.instance.Achievementreached1600();
+			
+			audioSource.PlayOneShot(achievement, 0.7F);
 
 		}
 			if(scores >= 1800)
 		{
 				AchievementManager.instance.Achievementreached1800();
+				
+				audioSource.PlayOneShot(achievement, 0.7F);
 					 
 		}
 		if(scores >= 2000)
 		{
 			AchievementManager.instance.Achievementreached2000();
+			
+			audioSource.PlayOneShot(achievement, 0.7F);
 
 		}
 	}

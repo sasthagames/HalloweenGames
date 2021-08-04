@@ -12,12 +12,10 @@ public class WeaponRailGun : MonoBehaviour
     public float offset;
 
     public GameObject projectile;
-    public GameObject shotEffect;
-    public Transform shotPoint;
-	//private AudioSource mAudioSrc;
-  //  public Animator camAnim;
- 
-//	public AdsManager ads;  
+	
+   	public GameObject shotEffect;
+   
+   public Transform shotPoint;
 
 	public Text ammoCounter;
 	
@@ -31,6 +29,7 @@ public class WeaponRailGun : MonoBehaviour
 	
 	
     private float timeBtwShots;
+
     public float startTimeBtwShots;
 	
 	
@@ -41,18 +40,22 @@ public class WeaponRailGun : MonoBehaviour
 	
 	void Start()
 	{
+
 		currentAmmo = maxAmmo;
-	//	mAudioSrc = GetComponent<AudioSource>();
+
 	}
 
     private void Update()
     {
 		
 		ammoCounter.text = currentAmmo.ToString();
+
 		Shoot();
+
       	if (currentAmmo <=  0)
 		{
 		//	Time.timeScale = 0.0f;
+
 			Reload();
 			return;
 			
@@ -65,15 +68,17 @@ public class WeaponRailGun : MonoBehaviour
 	public void Reload()
 	{
 		currentAmmo = maxAmmo;
+
 		 Debug.Log("Reloading .............");
 		 
 			
 		
 	}
-		public void ShopReload()
+	public void ShopReload()
 	{
 		
 		 Debug.Log("Rail Gun Shop reload .");
+
 		 currentAmmo = isAwardedTier1;
 	//	ads.PlayRewardedAd(onRewardedAdSuccess);		
 		
@@ -84,8 +89,11 @@ public class WeaponRailGun : MonoBehaviour
 	{
 		  // Handles the weapon rotation
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
 		 difference.Normalize();
+
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
         if (timeBtwShots <= 0 )
@@ -93,15 +101,22 @@ public class WeaponRailGun : MonoBehaviour
             if (Input.GetMouseButton(0)&& Time.timeScale != 0)
             {
 				currentAmmo--;
+
 			   SoundManager.PlaySound("playershoot");
+
                 Instantiate(projectile, shotPoint.position, transform.rotation);
+
                 timeBtwShots = startTimeBtwShots;
-				 CameraShaker.Instance.ShakeOnce(1.2f,0.8f,0.1f,0.15f);
+
+     			 CameraShaker.Instance.ShakeOnce(1.2f,0.8f,0.1f,0.15f);
 				 
             }
         }
-        else {
-            timeBtwShots -= Time.deltaTime;
+        else 
+		{
+        
+			timeBtwShots -= Time.deltaTime;
+
         }
 	}
 }

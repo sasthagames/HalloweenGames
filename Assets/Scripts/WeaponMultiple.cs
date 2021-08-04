@@ -104,6 +104,7 @@ public class WeaponMultiple : MonoBehaviour
 	{
 		
 		 Debug.Log("Reloading .............");
+		 
 		 currentAmmo = maxAmmo;
 	//	ads.PlayRewardedAd(onRewardedAdSuccess);		
 		
@@ -112,6 +113,7 @@ public class WeaponMultiple : MonoBehaviour
 	{
 		
 		 Debug.Log("WeaponMultiple .............");
+		 
 		 currentAmmo = isAwardedTier1;
 	//	ads.PlayRewardedAd(onRewardedAdSuccess);		
 		
@@ -121,7 +123,9 @@ public class WeaponMultiple : MonoBehaviour
 		  // Handles the weapon rotation
 		
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+		
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+		
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
         if (timeBtwShots <= 0)
@@ -129,21 +133,28 @@ public class WeaponMultiple : MonoBehaviour
             if (Input.GetMouseButton(0) && Time.timeScale != 0)
             {
 			  currentAmmo--;
-               // camAnim.SetTrigger("shake");
-			   SoundManager.PlaySound("bullettime");
-                Instantiate(projectile, shotPoint.position, transform.rotation);
+         
+			SoundManager.PlaySound("bullettime");
+               
+			   Instantiate(projectile, shotPoint.position, transform.rotation);
+			   				
 				Instantiate(projectile, shotPoint1.position, transform.rotation);
-				Instantiate(projectile, shotPoint2.position, transform.rotation);
-                timeBtwShots = startTimeBtwShots;
-				 CameraShaker.Instance.ShakeOnce(1.2f,0.8f,0.1f,0.15f);
 				
-			//	 slowMotionManager.DoSlowMotion();
-
-				   SlowMotionManager.instance.DoSlowMotion();
+				Instantiate(projectile, shotPoint2.position, transform.rotation);
+				
+                timeBtwShots = startTimeBtwShots;
+				
+				CameraShaker.Instance.ShakeOnce(1.2f,0.8f,0.1f,0.15f);
+				
+			   SlowMotionManager.instance.DoSlowMotion();
             }
         }
-        else {
+        else 
+		{
+			
             timeBtwShots -= Time.deltaTime;
+			
         }
+		
 	}
 }
