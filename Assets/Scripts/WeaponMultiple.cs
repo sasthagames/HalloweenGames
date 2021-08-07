@@ -22,6 +22,10 @@ public class WeaponMultiple : MonoBehaviour
 	
 	public Text ammoCounter;
 	
+	
+	 public float spread;
+	 
+     public byte spreadAmount;
 //	public AdsManager ads;
 	
 	
@@ -120,13 +124,18 @@ public class WeaponMultiple : MonoBehaviour
 	}
 	public void Shoot()
 	{
+		float angle = 0f;
 		  // Handles the weapon rotation
 		
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 		
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 		
+		difference.Normalize(); //normalizing the vector meaning all the sum of the vector will be = to 1.
+
+		
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+		
 
         if (timeBtwShots <= 0)
         {
@@ -134,7 +143,7 @@ public class WeaponMultiple : MonoBehaviour
             {
 			  currentAmmo--;
          
-			SoundManager.PlaySound("bullettime");
+				SoundManager.PlaySound("bullettime");
                
 			   Instantiate(projectile, shotPoint.position, transform.rotation);
 			   				

@@ -160,6 +160,8 @@ public class HomingMissle : MonoBehaviour
 			Destroy(gameObject);
 		 
 		}
+		
+	 
 		if  (collision.tag == "Ground") 
 		{
 			Instantiate(explosion, transform.position, Quaternion.identity);

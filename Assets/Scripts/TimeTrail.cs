@@ -10,6 +10,8 @@ public class TimeTrail : MonoBehaviour
  
  public Text timeText;
  
+ 
+ 
  public int minutes;
  
  public int sec;

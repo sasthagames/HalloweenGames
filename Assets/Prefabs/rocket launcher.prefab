@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2378520870068458635}
   - component: {fileID: 3335344267443764489}
   - component: {fileID: 2922116010045232209}
+  - component: {fileID: 8817406423920012555}
   m_Layer: 0
   m_Name: rocket launcher
   m_TagString: Untagged
@@ -140,10 +141,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393750948339685833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bec0f8a6855f92428dc72ecdaf013d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100006, guid: fd3f5a10001977043ad1d3712297c6eb, type: 3}
   rotationSpeed: 1
+  health: 0
+  force: 500
+  fieldofImpact: 0
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &8817406423920012555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393750948339685833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ae74dd9a5b6b243bab310dcb834020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  explosion: {fileID: 100006, guid: fd3f5a10001977043ad1d3712297c6eb, type: 3}
+  rotationSpeed: 15
+  force: 500
+  fieldofImpact: 350
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 128
