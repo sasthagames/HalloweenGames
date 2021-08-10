@@ -1927,6 +1927,7 @@ GameObject:
   - component: {fileID: 535216859}
   - component: {fileID: 535216861}
   - component: {fileID: 535216860}
+  - component: {fileID: 535216862}
   m_Layer: 5
   m_Name: Ammo Counter
   m_TagString: Untagged
@@ -1995,6 +1996,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535216858}
   m_CullTransparentMesh: 1
+--- !u!114 &535216862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535216858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40e9f2f9e2bcaf4ca972a5f66d46bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 535216860}
 --- !u!1 &547982372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,6 +3099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972140163}
   - component: {fileID: 972140162}
+  - component: {fileID: 972140164}
   m_Layer: 0
   m_Name: Time
   m_TagString: Untagged
@@ -3122,6 +3137,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972140164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972140161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40e9f2f9e2bcaf4ca972a5f66d46bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 438148614}
 --- !u!1 &987661210
 GameObject:
   m_ObjectHideFlags: 0

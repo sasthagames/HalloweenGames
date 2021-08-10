@@ -31,11 +31,20 @@ public class Playerhealth : MonoBehaviour
 	public float speed = 100.0f;
 	
 	public HealthBar healthBar;
-
 	
+/*	private Playerhealth _inst = null;
+
+	 public static Playerhealth GetInstance()
+	 {
+		 if (_inst == null)
+			 _inst = new Playerhealth();
+		 
+		 return _inst;
+	 }
+	 */
 	
     // Start is called before the first frame update
-	void Awake()
+	void Awake() 
 	{
 		instance = this;
 	}
@@ -60,22 +69,23 @@ public class Playerhealth : MonoBehaviour
 		
 	 public void TakeDamage(int amount)
 	 {
-	 currentHealth -= amount;
-	 
-	 healthBar.SetHealth(currentHealth);
-	 
-	 if (floatingTextPrefab  && currentHealth > 0)
-	 {
-	
-		ShowFlotingText();
-	 
-	 }
-		if (currentHealth <= 0)
-		{
-			
-			Death();
-			
-		}       
+		 currentHealth -= amount;
+		 currentHealth = Mathf.Max(0, currentHealth - amount);
+		 
+		 healthBar.SetHealth(currentHealth);
+		 
+		 if (floatingTextPrefab  && currentHealth > 0)
+		 {
+		
+			ShowFlotingText();
+		 
+		 }
+			if (currentHealth <= 0)
+			{
+				
+				Death();
+				
+			}       
 		
  }
  
