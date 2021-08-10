@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SurvialMode.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MiniGame.unity
+    guid: f8a5ce2e1b5551d48a6a3376fd512024
   m_configObjects: {}
